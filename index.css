@@ -26,41 +26,45 @@ body {
     background-color: var(--secondaryColor);
 }
 
-.spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/*.spinner {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
 
 .spinner__circle-blue {
     position: relative;
     width: 54px;
     height: 54px;
     overflow: hidden;
-    background: linear-gradient(#175092, #1A589F, #E4F1F8);
+    background: linear-gradient(#175092, #1A589F, #1A589F);
     border-radius: 100%;
-    animation: spin 1s infinite linear;
+    animation: spin 4s infinite linear;
 }
 
 .spinner__circle-green {
-    position: relative;
+    position: absolute;
+    top: 50px;
+    left: 50px;
     width: 54px;
     height: 54px;
     overflow: hidden;
     background: linear-gradient(#05520A, #156630, #156630);
     border-radius: 100%;
-    animation: spin 1s infinite linear;
+    animation: spin 2s infinite linear;
 }
 
 .spinner__circle-black {
-    position: relative;
+    position: absolute;
+    top: 5px;
+    left: 5px;
     width: 54px;
     height: 54px;
     overflow: hidden;
     background: linear-gradient(#F5F2F2, #F5F2F2, #505050);
     border-radius: 100%;
-    animation: spin 1s infinite linear;
+    animation: spin 2s infinite linear;
 }
 
 .spinner__circle-inner,
@@ -120,10 +124,15 @@ body {
 
 .spinner__circle-background-box {
     position: absolute;
-    height: 60px;
-    width: 60px;
-    background: black;
-    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    left: 147px;
+    top: 36px;
+
+    /* Svart (Kartverket) */
+
+    background: #222222;
+    border-radius: 50%;
 }
 
 /** {*/
@@ -138,39 +147,45 @@ body {
 /*    transform: translate(-50%, -50%);*/
 /*    background: #fff;*/
 /*}*/
-/*.loader {*/
-/*    position: relative;*/
-/*    width: 200px;*/
-/*    height: 200px;*/
-/*    border-radius: 10rem;*/
-/*    border: 3px solid white;*/
-/*    background: linear-gradient(blue, blue, white);*/
-/*    box-shadow: 0px 0px 100px -50px black;*/
-/*    animation: animate 1s linear infinite;*/
-/*}*/
 
-/*.loader::before {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    background: #fff;*/
-/*    left: 50%;*/
-/*    top: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    width: 80%;*/
-/*    height: 80%;*/
-/*    border-radius: 10rem;*/
-/*    border: 3px solid white;*/
-/*    box-shadow: inset 0px 0px 100px -70px #111;*/
-/*}*/
+.loader {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 3px solid white;
+    background: conic-gradient(from 90deg at 50% 50%, #E4F1F8 0deg, #E4F1F8 0.04deg, #1A589F 360deg);
+    /*box-shadow: 0px 0px 100px -50px black;*/
+    animation: animate 1s linear infinite;
+}
 
-/*@keyframes animate {*/
-/*    from {*/
-/*        transform: rotate(0deg);*/
-/*    }*/
-/*    to {*/
-/*        transform: rotate(360deg);*/
-/*    }*/
-/*}*/
+.loader::before {
+    position: absolute;
+    content: "";
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    border: 3px solid white;
+    /*box-shadow: inset 0px 0px 100px -70px #111;*/
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader--xs {
+    width: 20px;
+    height: 20px;
+}
 
 
 .progressbar {
