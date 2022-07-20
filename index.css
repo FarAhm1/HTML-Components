@@ -2,8 +2,8 @@
     --primaryColor: #e84;
     --secondaryColor: white;
     --red: red;
-    --green: green;
-    --blue: blue;
+    --green: #05520A;
+    --blue: #1A589F;
 }
 
 @keyframes spin {
@@ -38,17 +38,7 @@ body {
     width: 54px;
     height: 54px;
     overflow: hidden;
-    background: linear-gradient(white, blue, blue);
-    border-radius: 100%;
-    animation: spin 1s infinite linear;
-}
-
-.spinner__circle-red {
-    position: relative;
-    width: 54px;
-    height: 54px;
-    overflow: hidden;
-    background-color: var(--red);
+    background: linear-gradient(#175092, #1A589F, #E4F1F8);
     border-radius: 100%;
     animation: spin 1s infinite linear;
 }
@@ -58,15 +48,26 @@ body {
     width: 54px;
     height: 54px;
     overflow: hidden;
-    background-color: var(--green);
+    background: linear-gradient(#05520A, #156630, #156630);
+    border-radius: 100%;
+    animation: spin 1s infinite linear;
+}
+
+.spinner__circle-black {
+    position: relative;
+    width: 54px;
+    height: 54px;
+    overflow: hidden;
+    background: linear-gradient(#F5F2F2, #F5F2F2, #505050);
     border-radius: 100%;
     animation: spin 1s infinite linear;
 }
 
 .spinner__circle-inner,
+.spinner__circle-inner-black,
 .spinner__circle-gradient-blue,
 .spinner__circle-gradient-green,
-.spinner__circle-gradient-red {
+.spinner__circle-gradient-black {
      position: absolute;
      width: 44px;
      height: 44px;
@@ -100,14 +101,29 @@ body {
     transform: rotate(-45deg);
 }
 
-.spinner__circle-gradient-red {
+.spinner__circle-gradient-black {
     top: -24px;
     left: 6px;
-    background-color: var(--red);
-    background-image:    -moz-linear-gradient(0deg,var(--red) 0%, var(--secondaryColor) 50%);
-    background-image: -webkit-linear-gradient(0deg,var(--red) 0%, var(--secondaryColor) 50%);
-    background-image:         linear-gradient(0deg,var(--red) 0%, var(--secondaryColor) 50%);
+    background-color: #F5F2F2;
+    background-image:    -moz-linear-gradient(0deg, #F5F2F2 0%, var(--secondaryColor) 50%);
+    background-image: -webkit-linear-gradient(0deg, #F5F2F2 0%, var(--secondaryColor) 50%);
+    background-image:         linear-gradient(0deg, #F5F2F2 0%, var(--secondaryColor) 50%);
     transform: rotate(-45deg);
+}
+
+.spinner__circle-inner-black {
+    top: 50%;
+    left: 50%;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.spinner__circle-background-box {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background: black;
+    border-radius: 100%;
 }
 
 /** {*/
