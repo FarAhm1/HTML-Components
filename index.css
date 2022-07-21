@@ -1,3 +1,5 @@
+@import "progressbar.css";
+
 :root {
     --primaryColor: #e84;
     --secondaryColor: white;
@@ -6,7 +8,14 @@
     --blue: #1A589F;
 }
 
-.spinner {
+/*.center {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+
+.loader--container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -107,13 +116,4 @@
     left: 10px;
     top: 10px;
 }
-
-
-.progressbar {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
