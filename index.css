@@ -1,119 +1,88 @@
 @import "progressbar.css";
 
 :root {
-    --primaryColor: #e84;
-    --secondaryColor: white;
-    --red: red;
-    --green: #05520A;
+    /*groenn*/
+    --green_active: #05502A;
+    --green_dark: #156630;
+    --green: #1A833B;
+    --green_light: #D0ECD6;
+
+    /*Blaa*/
+    --blue_dark: #175092;
     --blue: #1A589F;
+    --blue_light: #E4F1F8;
+    --blue_hover: #439CCD;
+    --dark_blue_button: #213060;
+
+    /*roed og rosa*/
+    --red_error_message: #A32F00;
+    --red_dark: #D04a14;
+    --pink: #F7E6EB;
+
+    /*oransje og gul*/
+    --orange: #FCF1E8;
+    --yellow: #FFDD9D;
+    --yellow_light: #FCEBCD;
+
+    /*svart og hvit*/
+    --black: #222222;
+    --white: #FFFFFF;
+
+    /*graa*/
+    --gray_dark: #505050;
+    --gray: #707070;
+    --gray_light: #F5F2F2;
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/*.loader--container {*/
+/*body {*/
 /*    position: absolute;*/
 /*    top: 50%;*/
 /*    left: 50%;*/
 /*    transform: translate(-50%, -50%);*/
 /*}*/
 
-.loader {
-    position: relative;
+.collapsible_container {
+    width: 400px;
+}
+
+.collapsible {
+    background-color: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    padding: 18px;
     width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    border: 3px solid white;
-    /*box-shadow: 0px 0px 100px -50px black;*/
-    animation: animate 1s linear infinite;
-    /*transform: rotate(-4.95deg);*/
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-top: var(--black) 1px solid;
 }
 
-.loader::before {
-    position: absolute;
-    content: "";
-    background: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    border-radius: 100%;
-    border: 3px solid white;
+.active {
+    background-color: var(--white);
 }
 
-.white--loader {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    border: 3px solid black;
-    animation: animate 1s linear infinite;
+.collapsible:hover {
+    background-color: var(--gray_light);
 }
 
-.white--loader::before {
-    position: absolute;
-    content: "";
-    background: black;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    border-radius: 100%;
-    border: 3px solid black;
+.collapsible:after {
+    content: '\002B';
+    color: var(--black);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
 
-@keyframes animate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.active:after {
+    content: "\2212";
 }
 
-.loader--xs {
-    width: 20px;
-    height: 20px;
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: var(--white);
+    border-bottom: var(--black) 1px solid;
 }
-
-.loader--s {
-    width: 32px;
-    height: 32px;
-}
-
-.loader--demo {
-    width: 100px;
-    height: 100px;
-}
-
-.loader--blue {
-    background: conic-gradient(from 90deg at 50% 50%, #E4F1F8 0deg, #E4F1F8 0.04deg, #1A589F 360deg);
-}
-
-.loader--green {
-    background: conic-gradient(from 90deg at 50% 50%, #E4F1F8 0deg, #D0ECD6 0.04deg, #05502A 360deg);
-}
-
-.loader--white {
-    background: conic-gradient(from 90deg at 50% 50%, #E4F1F8 0deg, rgba(255, 255, 255, 0) 0.04deg, #FFFFFF 360deg);
-}
-
-.loader--white--background--box {
-    position: absolute;
-    width: 120%;
-    height: 60%;
-    background: #222222;
-    left: -10px;
-}
-
-.loader--pos--white {
-    left: 10px;
-    top: 10px;
-}
-
