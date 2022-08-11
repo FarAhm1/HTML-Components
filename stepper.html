@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styling.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .stepper__sizes {
+            --size: 3rem;
+        }
+
+        .c-stepper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .c-stepper__item {
+            display: flex;
+            align-items: center;
+        }
+
+        .c-stepper__item:before {
+            content: "";
+            display: block;
+            flex: 0 0 var(--size);
+            height: var(--size);
+            border-radius: 50%;
+        }
+
+        .c-stepper__item:not(:last-child) {
+            flex: 1;
+        }
+
+        .c-stepper__item:not(:last-child):after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background-color: var(--blue_dark);
+        }
+
+        .c-stepper__title {
+            height: 24px;
+            width: 24px;
+            border: 2px solid var(--blue_dark);
+            border-radius: 50%;
+        }
+
+        .c-stepper__title--center {
+            position: relative;
+            left: 0.50rem;
+            top: -12px;
+        }
+    </style>
+    <title>Stepper</title>
+</head>
+<body>
+
+<ol class="c-stepper">
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">1</p>
+        </div>
+    </li>
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">2</p>
+        </div>
+    </li>
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">3</p>
+        </div>
+    </li>
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">4</p>
+        </div>
+    </li>
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">5</p>
+        </div>
+    </li>
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">6</p>
+        </div>
+    </li>
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">7</p>
+        </div>
+    </li>
+    <li class="c-stepper__item">
+        <div class="c-stepper__title">
+            <p class="label label--xs c-stepper__title--center">8</p>
+        </div>
+    </li>
+</ol>
+
+</body>
+</html>

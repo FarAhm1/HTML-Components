@@ -1,0 +1,27 @@
+{
+  "name": "html-components",
+  "version": "1.0.0",
+  "description": "html components testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FarAhm1/HTML-Components.git"
+  },
+  "dependencies": {
+    "@kartverket/kvib": "^0.0.34"
+  },
+  "keywords": [
+    "html",
+    "js",
+    "css"
+  ],
+  "author": "FarAhm1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FarAhm1/HTML-Components/issues"
+  },
+  "homepage": "https://github.com/FarAhm1/HTML-Components#readme"
+}
