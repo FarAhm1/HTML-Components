@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/FarAhm1/HTML-Components.git"
   },
-  "dependencies": {
-    "@kartverket/kvib": "^0.0.34"
-  },
   "keywords": [
     "html",
     "js",
