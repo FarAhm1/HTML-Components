@@ -2,9 +2,9 @@
     --color-light: #fdfdfd;
     --color-dark: #27474e;
     --color-mid: #496970;
-    --color-primary: #f3344a;
-    --color-primary-glare: #f4d7da;
-    --color-secondary: #678c94;
+    --color-primary: darkblue;
+    --color-primary-glare: lightblue;
+    --color-secondary: blue;
     --color-secondary-glare: #ebf0f1;
     --font-condensed: 'Saira Condensed', sans-serif;
     --font-sans: 'Asap', sans-serif;
@@ -115,7 +115,7 @@ body {
 
 .stepper strong::before {
     content: counter(steps, decimal-leading-zero);
-    speak-as: numbers;
+    speak-as: digits;
     font-family: var(--font-condensed);
     font-weight: 900;
     color: var(--color-secondary-glare);
@@ -129,6 +129,7 @@ body {
 .stepper [aria-current='step'] strong::after {
     background-color: var(--color-primary-glare);
     border-color: var(--color-primary);
+    background-image: element('<span class="material-symbols-icon">edit</span>');
 }
 
 .stepper [data-status='complete'] strong::after {
