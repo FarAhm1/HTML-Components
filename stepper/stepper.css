@@ -6,7 +6,7 @@
     --color-primary-glare: lightblue;
     --color-secondary: blue;
     --color-secondary-glare: #ebf0f1;
-    --font-condensed: 'Saira Condensed', sans-serif;
+    --font-condensed: 'Mulish', sans-serif;
     --font-sans: 'Asap', sans-serif;
     --shadow: 0px 0px 40px rgba(39, 71, 78, 0.1);
     --size-300: 0.88rem;
@@ -14,6 +14,9 @@
     --size-500: 1.44rem;
     --size-600: 2rem;
     --size-700: 2.5rem;
+    --stepper-y-space: var(--size-500);
+    --stepper-x-space: var(--size-700);
+    --stepper-modifier: 1.5ex;
 }
 
 body {
@@ -25,11 +28,7 @@ body {
 }
 
 .stepper {
-    --stepper-y-space: var(--size-500);
-    --stepper-x-space: var(--size-700);
-    --stepper-modifier: 1.5ex;
-
-    border: 1px solid var(--color-secondary-glare);
+    border: 1px solid white;
     padding: var(--size-600);
     box-shadow: var(--shadow);
     border-radius: var(--size-400);
@@ -99,35 +98,37 @@ body {
 
 /* Dot */
 .stepper strong::after {
-    content: '';
+    content: "";
     display: block;
     width: 16px;
     height: 16px;
     border-radius: 16px;
-    background-color: var(--color-secondary-glare);
+    background-color: white;
     position: absolute;
     bottom: 100%;
+
     left: calc(var(--stepper-x-space) * -1);
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--color-primary);
     transform: translateY(50%);
     z-index: 1;
 }
 
 .stepper strong::before {
-    content: counter(steps, decimal-leading-zero);
+    content: counter(steps);
     speak-as: digits;
     font-family: var(--font-condensed);
-    font-weight: 900;
-    color: var(--color-secondary-glare);
+    /*font-weight: 700;*/
+    color: black;
     position: absolute;
-    bottom: 2ex;
-    left: -1ch;
-    z-index: -1;
-    line-height: 1;
+    top: -0.55rem;
+    left: -2.25rem;
+    z-index: 2;
+    font-size: 1rem;
+    /*line-height: 1;*/
 }
 
 .stepper [aria-current='step'] strong::after {
-    background-color: var(--color-primary-glare);
+    background-color: white;
     border-color: var(--color-primary);
 }
 
