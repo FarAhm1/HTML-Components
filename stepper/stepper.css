@@ -129,7 +129,6 @@ body {
 .stepper [aria-current='step'] strong::after {
     background-color: var(--color-primary-glare);
     border-color: var(--color-primary);
-    background-image: element('<span class="material-symbols-icon">edit</span>');
 }
 
 .stepper [data-status='complete'] strong::after {
