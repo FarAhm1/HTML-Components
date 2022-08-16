@@ -16,7 +16,7 @@
     --size-700: 2.5rem;
     --stepper-y-space: var(--size-500);
     --stepper-x-space: var(--size-700);
-    --stepper-modifier: 1.5ex;
+    --stepper-modifier: -0.5rem;
 }
 
 body {
@@ -58,7 +58,7 @@ body {
     width: 2px;
     background: var(--color-primary);
     position: absolute;
-    left: 7px;
+    left: 8px;
 }
 
 /* Up line */
@@ -90,10 +90,15 @@ body {
 
 .stepper strong {
     display: block;
-    font-family: var(--font-sans);
-    font-size: var(--size-500);
     text-transform: none;
     position: relative;
+}
+
+.stepper label {
+    position: relative;
+    top: -0.8rem;
+    left: -1rem;
+    text-transform: none;
 }
 
 /* Dot */
@@ -116,18 +121,16 @@ body {
 .stepper strong::before {
     content: counter(steps);
     speak-as: digits;
-    font-family: var(--font-condensed);
-    /*font-weight: 700;*/
     color: black;
     position: absolute;
-    top: -0.55rem;
-    left: -2.25rem;
+    top: -0.75rem;
+    left: -2.22rem;
     z-index: 2;
-    font-size: 1rem;
-    /*line-height: 1;*/
 }
 
 .stepper [aria-current='step'] strong::after {
+    position: absolute;
+    align-items: center;
     background-color: white;
     border-color: var(--color-primary);
 }
@@ -135,11 +138,28 @@ body {
 .stepper [data-status='complete'] strong::after {
     background-color: var(--color-primary);
     background-image: url('data:image/svg+xml;utf8,<svg fill="white" width="9" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M7.868.141a.474.474 0 01.03.652L3.244 6.087a.433.433 0 01-.627.028L.292 3.911a.474.474 0 01-.03-.652.433.433 0 01.628-.028l1.996 1.892L7.24.17A.433.433 0 017.868.14z"/></svg>');
-    background-size: 9px 7px;
+    background-size: 10px 8px;
     background-position: 3px center;
     background-repeat: no-repeat;
     border-color: var(--color-primary);
 }
+
+.stepper [data-status='complete'] strong::before {
+    content: "";
+}
+
+.stepper [aria-current='step'] strong::after,
+.stepper [aria-current='step'] strong::before {
+    content: "";
+    background-color: var(--color-primary);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" height="40" width="40"><path d="M32.792 13.125 26.875 7.25l1.917-1.958q.791-.792 1.979-.771 1.187.021 1.979.812l1.958 1.959q.792.791.813 1.937.021 1.146-.771 1.938Zm-2 2L10.917 35H5v-5.917L24.875 9.208Z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 2px center;
+}
+
+
+
 
 
 
