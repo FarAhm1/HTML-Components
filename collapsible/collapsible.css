@@ -1,0 +1,51 @@
+[aria-controls], button {
+    cursor: pointer;
+}
+
+.collapsible_wrapper {
+    width: 80%;
+    border-bottom: var(--black) 1px solid;
+}
+
+.collapsible {
+    font-family: 'Mulish', sans-serif;
+    font-weight: bold;
+    background-color: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    border-top: var(--black) 1px solid;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: var(--black);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsible:hover {
+    background-color: var(--gray_light);
+}
+
+.active {
+    background-color: var(--white);
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: var(--white);
+}
