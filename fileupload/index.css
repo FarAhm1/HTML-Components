@@ -1,0 +1,120 @@
+@import url("https://kartverket.github.io/kvib/css/main.css");
+
+.upload__window__wrapper {
+    width: 43.8125rem;
+    height: 34rem;
+    border: 0.0625rem solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.upload__window__title {
+    width: 43.8125rem;
+    height: 4rem;
+    background: linear-gradient(90deg, var(--blue) 20%, var(--blue_dark_button) 100%);
+    color: white;
+    border-radius: 1rem 1rem 0 0;
+    text-align: left;
+}
+
+.upload__window__title label {
+    position: relative;
+    top: 1rem;
+    padding-left: 1rem;
+}
+
+.upload__content {
+    width: 38.8125rem;
+    height: 14rem;
+    border: 0.006rem dotted black;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    left: 2.5rem;
+}
+
+.upload__content--info {
+    position: relative;
+    top: 5rem;
+}
+
+.upload__content--info a {
+    color: var(--black);
+}
+
+.upload__content--info .material-symbols-outlined {
+    font-size: 48px;
+    color: var(--blue);
+}
+
+.upload__content__status__wrapper {
+    position: relative;
+    left: 2.5rem;
+}
+
+.upload__content__button {
+    position: relative;
+    left: 15rem;
+}
+
+.upload__content__file {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12rem;
+    align-items: center;
+    /*position: relative;*/
+    /*left: 2rem;*/
+}
+
+
+/*DEMO!*/
+.progressbar--demo::after {
+    animation: load 5s infinite;
+    background: #213060;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 40%;
+    }
+    50% {
+        width: 60%;
+    }
+    75% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.progressbar__label::after {
+    content: "";
+    animation: loading-label 5s infinite;
+}
+
+@keyframes loading-label {
+    0% {
+        content: "0%";
+    }
+    25% {
+        content: "25%";
+    }
+    50% {
+        content: "50%";
+    }
+    75% {
+        content: "75%";
+    }
+    100% {
+        content: "100%";
+    }
+}
+
+
+
+
