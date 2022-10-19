@@ -4,6 +4,17 @@
     box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container > * {
+    padding: .5em 1em;
+    margin: 0 0.5em 1em 0.5em;
+    flex: 0 1 20em;
+}
+
 .card__link {
     text-decoration: none;
     color: var(--black);
@@ -99,7 +110,3 @@
 .card__content h1, p{
     margin: 0;
 }
-
-
-
-
